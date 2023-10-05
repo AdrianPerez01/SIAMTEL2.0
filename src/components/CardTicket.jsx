@@ -72,14 +72,14 @@ const CardTicket = (props) => {
       </div>
       {/* Number of tickets */}
       <div>
-        <h1 className="text-4xl text-white font-bold mb-4">{totalTickets}</h1>
+        <h1 className="text-4xl text-black font-bold mb-4">{totalTickets}</h1>
         <p className={textColor}>{text}</p>
       </div>
       <hr className="border border-dashed border-gray-500/50 my-4" />
       <div>
         <Link
           to="/"
-          className="flex items-center gap-2 text-white hover:underline"
+          className="flex items-center gap-2 text-black hover:underline"
         >
           <RiAddLine /> Agregar nuevo ticket
         </Link>

@@ -6,7 +6,7 @@ function Navar(){
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a className=" block text-teal-600" href="/">
           <span className="sr-only">Home</span>
-          <img  className="w-52" src="/public/siamtel.png" alt="" srcset="" />
+          <img  className="w-52" src="/siamtel.png" alt="" srcset="" />
         </a>
 
         <div className="flex flex-1 items-center justify-end md:justify-between">

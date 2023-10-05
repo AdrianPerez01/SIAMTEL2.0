@@ -15,11 +15,12 @@ import Error404 from "./pages/Error404";
 import Tickets from "./pages/admin/Tickets";
 import Doctor from "./pages/admin/Doctor";
 import Patient from "./pages/admin/Patient";
+import Cita from "./pages/admin/Cita";
 import Home2 from "./pages/Home2"
+import { useEffect } from "react";
+import { client } from './supabase/client'
 
 function App() {
-
-
 
   return (
    
@@ -35,6 +36,7 @@ function App() {
           <Route path="tickets" element={<Tickets />} />
           <Route path="Doctor" element={<Doctor />} />
           <Route path="Patient" element={<Patient />} />
+          <Route path="Cita" element={<Cita />} />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>

@@ -9,38 +9,8 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 const Home = () => {
   return (
     <div>
-      <div className="flex items-center justify-between mb-10">
-        <h1 className="text-4xl text-white">Good morning, jotredev!</h1>
-        <div className="flex items-center gap-2 text-3xl">
-          <RiArrowLeftSLine className="hover:cursor-pointer hover:text-white transition-colors" />
-          <RiArrowRightSLine className="hover:cursor-pointer hover:text-white transition-colors" />
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {/* Card */}
-        <CardTicket
-          ticket="total"
-          totalTickets="145,000"
-          text="Tickets totales"
-        />
-        <CardTicket
-          ticket="pending"
-          totalTickets="5,000"
-          text="Tickets pendientes"
-        />
-        <CardTicket
-          ticket="inProcess"
-          totalTickets="130,000"
-          text="Tickets en proceso"
-        />
-        <CardTicket
-          ticket="close"
-          totalTickets="10,000"
-          text="Tickets cerrados"
-        />
-      </div>
       <div>
-        <h1 className="text-2xl text-white my-10">Tickets más recientes</h1>
+        <h1 className="text-2xl text-black my-10">Citas Medicas</h1>
       </div>
       <div className="bg-secondary-100 p-8 rounded-xl">
         <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-4 mb-10 p-4">
@@ -61,7 +31,7 @@ const Home = () => {
           </div>
           <div>
             <h5 className="md:hidden text-white font-bold mb-2">Estatus</h5>
-            <span className="py-1 px-2 bg-yellow-500/10 text-yellow-500 rounded-lg">
+            <span className="py-1 px-2 rounded-lg">
               Abierto
             </span>
           </div>
@@ -113,7 +83,7 @@ const Home = () => {
           </div>
           <div>
             <h5 className="md:hidden text-white font-bold mb-2">Estatus</h5>
-            <span className="py-1 px-2 bg-blue-500/10 text-blue-500 rounded-lg">
+            <span className="py-1 px-2 rounded-lg">
               En proceso
             </span>
           </div>
@@ -160,18 +130,18 @@ const Home = () => {
             <span>#25546</span>
           </div>
           <div>
-            <h5 className="md:hidden text-white font-bold mb-2">Descripción</h5>
-            <p>Mi computadora no prende</p>
+            <h5 className="md:hidden text-white font-bold mb-2">Paciente</h5>
+            <p>Luis Garcia</p>
           </div>
           <div>
-            <h5 className="md:hidden text-white font-bold mb-2">Estatus</h5>
-            <span className="py-1 px-2 bg-green-500/10 text-green-500 rounded-lg">
-              Cerrado
+            <h5 className="md:hidden text-white font-bold mb-2">Doctor</h5>
+            <span className="py-1 px-2 rounded-lg">
+              David torres
             </span>
           </div>
           <div>
             <h5 className="md:hidden text-white font-bold mb-2">Fecha</h5>
-            <span>28 octubre 2022</span>
+            <span>28/10/2022</span>
           </div>
           <div>
             <h5 className="md:hidden text-white font-bold mb-2">Acciones</h5>

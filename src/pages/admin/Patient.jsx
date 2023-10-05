@@ -11,12 +11,15 @@ function Patient() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await client.from("patient").insert(
+      
+const { data: { user } } = await client.auth.getUser()
+      console.log(user);
+      /*const result = await client.from("patient").insert(
         {
           first_name: firstName,
           second_name: lastname
         });
-      console.log(result);
+      console.log(result);*/
     } catch (error) {
       console.error(error);
     }
@@ -24,8 +27,7 @@ function Patient() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div class="border-b border-gray-900/10 pb-12">
-        <div class="border-b border-gray-900/10 pb-12">
+      
           <h2 class="text-base font-semibold leading-7 text-white-900">
             Ingresar un Paciente
           </h2>
@@ -39,7 +41,7 @@ function Patient() {
                 for="first-name"
                 class="block text-sm font-medium leading-6 text-white-900"
               >
-                PRIMER NOMBRE
+                Primer Nombre
               </label>
               <div class="mt-2">
                 <input
@@ -57,7 +59,7 @@ function Patient() {
                 for="last-name"
                 class="block text-sm font-medium leading-6 text-white-900"
               >
-                SEGUNDO NOMBRE
+                Segundo Nombre
               </label>
               <div class="mt-2">
                 <input
@@ -75,7 +77,7 @@ function Patient() {
                 for="first-name"
                 class="block text-sm font-medium leading-6 text-white-900"
               >
-                PRIMER APELLIDO
+                Primer Apellido
               </label>
               <div class="mt-2">
                 <input
@@ -93,7 +95,7 @@ function Patient() {
                 for="last-name"
                 class="block text-sm font-medium leading-6 text-white-900"
               >
-                SEGUNDO APELLIDO
+                Segundo Apellido
               </label>
               <div class="mt-2">
                 <input
@@ -111,7 +113,41 @@ function Patient() {
                 for="postal-code"
                 class="block text-sm font-medium leading-6 text-white-900"
               >
-                CODIGO DE CARNET
+                Codigo de Carnet
+              </label>
+              <div class="mt-2">
+                <input
+                  type="text"
+                  name="postal-code"
+                  id="postal-code"
+                  autocomplete="postal-code"
+                  class="py-3 pl-8 pr-4 bg-secondary-100 w-full outline-none border border-primary rounded-lg"
+                />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="postal-code"
+                class="block text-sm font-medium leading-6 text-white-900"
+              >
+                Phone
+              </label>
+              <div class="mt-2">
+                <input
+                  type="text"
+                  name="postal-code"
+                  id="postal-code"
+                  autocomplete="postal-code"
+                  class="py-3 pl-8 pr-4 bg-secondary-100 w-full outline-none border border-primary rounded-lg"
+                />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="postal-code"
+                class="block text-sm font-medium leading-6 text-white-900"
+              >
+                Email
               </label>
               <div class="mt-2">
                 <input
@@ -124,8 +160,7 @@ function Patient() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+
 
       <div class="mt-6 flex items-center justify-end gap-x-6">
         <button
